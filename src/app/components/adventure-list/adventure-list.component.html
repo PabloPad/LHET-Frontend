@@ -1,0 +1,61 @@
+<div id="wrapper" class="container-fluid">
+    <div class="row" style="height:100%">
+        <div id="adventureList" class="col-lg-4">
+            <h4 class="text-light">Current adventures</h4>
+            <div class="block-section">
+            <div style="height:70%;">
+            <table class="table table-hover">
+                <thead style="text-align:center;">
+                    <th>Adventure</th>
+                    <th>Stages</th>
+                </thead>
+                <tbody>
+                    <tr class="text-light" (click)="retreiveQuests(adventureEntity.name);" *ngFor="let adventureEntity of adventureList">
+                        <td>{{adventureEntity.name}}</td>
+                        <td>{{adventureEntity.stages}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <div *ngIf="newAdventureClicked" style="margin-top:10px;" class="form-group d-flex justify-content-center">
+                <span class="text-light">Adventure name: &nbsp; &nbsp; </span> <input style="width:50%;" name="advName" type="text" placeholder="Adventure name" class="form-control" [(ngModel)]="newAdventureName">
+            </div>
+            <button *ngIf="!newAdventureClicked" style="position:absolute; width:40%; left:30%; bottom:5%;" class="btn btn-outline-light" (click)="toggleNewAdventure()">New Adventure</button>
+            <button *ngIf="newAdventureClicked" style="position:absolute; width:40%; left:30%; bottom:5%;" class="btn btn-outline-light" (click)="createAdventure()">Create</button>
+            <!--<div style="margin-top:10px;" class="d-flex justify-content-center"><button style="width:40%;" class="btn btn-outline-light" (click)="toggleNewAdventure()">New Adventure</button></div>-->
+            <!--style="position:absolute; width:40%; left:30%; bottom:5%;"-->
+
+            
+            </div>
+        </div>
+        <div *ngIf="openAdventure" id="questList" class="col-lg-8">
+            <h4 class="text-light">{{openAdventure}} quests</h4>
+            <div class="block-section">
+            <div id="scrolltable">
+            <table class="table table-hover">
+                <thead style="text-align:center">
+                    <tr>
+                    <th>Stage</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let questEntity of questList" class="text-light">
+                        <td>{{questEntity.stage}}</td>
+                        <td>{{questEntity.title}}</td>
+                        <td>{{questEntity.body}}</td> 
+                        <td><button class="btn btn-outline-secondary" [routerLink]="['/quests', questEntity.id]">Edit</button></td> 
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <button *ngIf="openAdventure" style="position:absolute; bottom:5%; left:30%; width:40%;" class="btn btn-outline-light" [routerLink]="['/', openAdventure, 'newQuest']">Add quest</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

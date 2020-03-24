@@ -1,0 +1,38 @@
+#wrapper{
+    height:100vh;
+    
+}
+
+.block-section{
+    height:70%;
+    position:relative;
+    background-color:rgba(0,0,0,0.4);
+   
+
+}
+
+.testblock{
+    border-radius:30px;
+    background-color:rgba(0,0,0,0.3);
+    
+}
+
+thead{
+    
+    background-color:#222222;
+    color:lightslategray;
+    border-style:none;
+
+}
+
+thead th{
+    background-color:#222222;
+    position:sticky;
+    top:0px;
+    border-style:none;
+    
+}
+
+#scrolltable{
+    overflow-y: auto; height:80%;
+}

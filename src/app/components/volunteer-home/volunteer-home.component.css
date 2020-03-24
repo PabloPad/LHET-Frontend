@@ -1,0 +1,10 @@
+#scrolltable{
+    max-height:250px;
+    overflow-y:auto;
+}
+
+#scrolltable thead th{
+    position:sticky;
+    top:0px;
+    border-style:none;
+}

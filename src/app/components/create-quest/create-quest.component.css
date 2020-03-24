@@ -1,0 +1,14 @@
+.block-section{
+    height:70%;
+    position:relative;
+    background-color:rgba(0,0,0,0.4);
+    padding:20px;
+    margin:20px;
+    border-radius:20px;
+}
+
+.block-section button{
+    
+    width:47%;
+
+}

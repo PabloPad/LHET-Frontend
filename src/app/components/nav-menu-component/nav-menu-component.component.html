@@ -1,0 +1,27 @@
+<header>
+    <nav class="navbar navbar-expand navbar-light" style=" background-color:rgb(200, 200, 240);">
+        <!--<div><a class="nav-link" href="http://www.parabolt.net"></a></div>-->
+
+        <ul class="navbar-nav"> 
+            
+            <li><a routerLink="" class="nav-link">Home</a></li>
+            <li><a *ngIf="autService.isSessionAuthenticated()" routerLink="/logout" class="nav-link">Logout</a></li>
+            <!--
+            <li><a *ngIf="autService.isSessionAuthenticated()" routerLink="/adventures" class="nav-link">Adventures</a></li>
+            <li><a *ngIf="autService.isSessionAuthenticated()" routerLink="" class="nav-link">Statistics</a></li>
+            <li><a *ngIf="autService.isSessionAuthenticated()" routerLink="" class="nav-link">Options</a></li>
+            -->
+
+        </ul>
+        <!--
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a href="" class="nav-link">Help</a></li>
+            <li><a *ngIf="autService.isSessionAuthenticated()" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+        
+        -->
+        <ul class="navbar-nav  navbar-collapse justify-content-center">
+            <h5 class="text-secondary"><small class="lead">Plataforma de Asistencia y Recursos</small></h5>
+        </ul>
+    </nav>
+</header>

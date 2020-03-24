@@ -1,0 +1,21 @@
+#wrapper{
+    height:100%;
+    background-color:rgb(243, 243, 243);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+#routerBody{
+    min-height:100vh;
+}
+
+#ftr{
+    position:fixed;
+    bottom:0px;
+    width:100%;
+    height:24px;
+    background-color:#151515bd;
+    font-size:12px;
+    padding-left:20px;
+}
+
